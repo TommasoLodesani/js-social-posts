@@ -70,6 +70,8 @@ for(let i = 0; i < posts.length; i++){
     divPost.className = "post";
     myContainer.append(divPost);
 
+    // div post-header
+
     const divPostHeader = document.createElement("div");
     divPostHeader.className = "post__header";
     divPost.append(divPostHeader);
@@ -106,4 +108,65 @@ for(let i = 0; i < posts.length; i++){
     divPostMetaTime.className = "post-meta__time";
     divPostMetaTime.append(postsElement.created);
     divPostMetaData.append(divPostMetaTime);
+
+
+    // div post__text
+
+    const divPostText = document.createElement("div");
+    divPostText.className = "post__text";
+    divPostText.append(postsElement.content);
+    divPost.append(divPostText);
+
+    // div post__image
+    const divPostImage = document.createElement("div");
+    divPostImage.className = "post__image";
+    divPost.append(divPostImage);
+
+    const imgPostImage = document.createElement("img");
+    imgPostImage.src = postsElement.media;
+    imgPostImage.alt = "";
+    divPostImage.append(imgPostImage);
+
+
+
+    // div post footer
+
+    // div likes button
+
+    const divPostFooter = document.createElement("div");
+    divPostFooter.className = "post__footer";
+    divPost.append(divPostFooter);
+
+    const divLikesJsLikes = document.createElement("div");
+    divPostFooter.className = "likes";
+    divPostFooter.append(divLikesJsLikes);
+
+    const divLikesCta = document.createElement("div");
+    divLikesCta.className = "likes__cta";
+    divLikesJsLikes.append(divLikesCta);
+
+    const aLinkButton = document.createElement("a");
+    aLinkButton.className = "like-button";
+    divLikesCta.append(aLinkButton);
+
+    const iLikeButton = document.createElement("i");
+    iLikeButton.className += `like-button__icon fas fa-thumbs-up`;
+    aLinkButton.append(iLikeButton);
+
+    const spanLikeButton = document.createElement("span");
+    spanLikeButton.className = "like-button__label";
+    spanLikeButton.innerHTML += `Mi Piace`;
+    iLikeButton.append(spanLikeButton);
+
+    // div counter
+
+    const divLikesCounter = document.createElement("div");
+   
+    divLikesCounter.className = "likes__counter";
+
+    const bLikeCounter = document.createElement("b");
+    bLikeCounter.setAttribute("id", "like-counter-1")
+    divLikesCounter.innerHTML += `Piace a ${bLikeCounter}`;
+
+
 }
