@@ -73,7 +73,7 @@ for (let i = 0; i < posts.length; i++) {
 
                     <div class="post-meta__icon">
 
-                    ${postsElement.author.image}
+                    <img class="profile-pic" src="${postsElement.author.image}" alt="${postsElement.author.name}"> 
 
                     </div>
                     <div class="post-meta__data">
@@ -90,7 +90,7 @@ for (let i = 0; i < posts.length; i++) {
             <div class="post__text">${postsElement.content}</div>
             
             <div class="post__image">
-                ${postsElement.media}
+                <img src="${postsElement.media}" alt="">
             </div>
 
 
